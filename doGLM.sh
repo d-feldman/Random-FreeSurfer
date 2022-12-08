@@ -8,8 +8,8 @@ foreach hemi (lh rh)
         mri_glmfit \
         --y {$hemi}.{$meas}.{$study}.{$smoothness}.mgh \
         --fsgd FSGD/{$study}.fsgd \
-        --C Contrasts/CB-HC.mtx \
-        --C Contrasts/HC-CB.mtx \
+        --C Contrasts/Pre-Post.mtx \
+        --C Contrasts/Post-Pre.mtx \
         --surf fsaverage {$hemi}  \
         --cortex  \
         --glmdir {$hemi}.{$meas}.{$study}.{$smoothness}.glmdir
